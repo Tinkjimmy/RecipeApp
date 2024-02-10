@@ -1,0 +1,38 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f6f6;
+}
+
+.about-me-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+
+.about-me-left {
+    flex: 1;
+}
+
+.about-me-right {
+    flex: 2;
+    padding: 0 2em;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Make the image circular */
+}
+
+h2, h3 {
+    color: #333;
+}
+
+ul {
+    list-style-type: disc; /* Use bullet points for the list */
+    color: #555;
+}

@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+
+<body class="detail-page">
+    <div class="container">
+        <div class="content">
+            <h2>Details: {{ object.name }}</h2>
+
+            <p><b>Recipe's name:</b> {{ object.name }}</p>
+            <p><b>Cooking time:</b> {{ object.cooking_time }}</p>
+            <p><b>Ingredients:</b> {{ object.ingredients }}</p>
+            <p><b>Difficulty:</b> {{ object.difficulty }}</p>
+        </div>
+
+        <div class="image-container">
+            <img src="{{ object.pic.url }}" height="100%" class="rounded-image">
+        </div>
+    </div>
+</body>
+
+</html>

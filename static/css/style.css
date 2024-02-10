@@ -1,0 +1,172 @@
+/* Reset styles */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f6f6f6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styles */
+header {
+    background-color: #fc8822;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+/* Navigation styles */
+nav {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 1em;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+/* Table styles */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+/* Button styles */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fc8822;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #e57300;
+}
+
+/* Center the text */
+.center-text {
+    text-align: center;
+}
+
+/* Define the container */
+.container {
+    max-width: 800px; /* Adjust the width as needed */
+    margin: 50px auto; /* Add space from the top of the page and center horizontally */
+    padding: 20px; /* Add some padding around the content */
+}
+
+
+
+
+/* Style for the recipe details */
+.recipe-details {
+    margin-bottom: 20px; /* Add space between the details and the image */
+}
+/* Define the container */
+.container {
+    max-width: 800px; /* Adjust the width as needed */
+    margin: 50px auto; /* Add space from the top of the page and center horizontally */
+    padding: 20px; /* Add some padding around the content */
+    border: 2px solid #ccc; /* Add a border */
+    background-color: #f9f9f9; /* Add a background color */
+    border-radius: 8px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow */
+}
+.detail-page {
+    background-color: #ffe4b2; /* Light orange background color */
+}
+
+/* Center the title horizontally and add light orange background */
+.title-container {
+    text-align: center;
+    background-color: #ffe4b2; /* Light orange background color */
+    padding: 20px 0; /* Add some padding above and below the title */
+}
+
+/* Style for the logout link */
+.logout-link {
+    text-align: center;
+    margin-bottom: 20px; /* Add some space below the link */
+}
+
+/* Style for the recipe table */
+.recipe-table {
+    width: 50%; /* Set the table width to 50% of the container */
+    margin: 0 auto; /* Center the table horizontally */
+    border-collapse: collapse; /* Collapse table borders */
+}
+
+/* Center text and images in table cells */
+.recipe-table td,
+.recipe-table th {
+    text-align: center;
+}
+
+/* Ensure images are squares */
+.recipe-image {
+    width: 100px; /* Set image width */
+    height: 100px; /* Set image height */
+    object-fit: cover; /* Cover the container maintaining aspect ratio */
+    border-radius: 5px; /* Add a border radius for rounded corners */
+}
+
+/* Add rounded corners to the image */
+.rounded-image {
+    margin-top: 10px;
+    border-radius: 10px; /* Adjust the border radius to control the degree of rounding */
+    width: 200px; /* Set the width */
+    height: 200px; /* Set the height to match the width */
+    object-fit: cover; /* Ensure the image covers the entire container */
+}
+
+/* Center the content */
+.container {
+    text-align: center;
+    margin: auto;
+    width: 80%;
+}
+
+/* Style the form container */
+.form-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
