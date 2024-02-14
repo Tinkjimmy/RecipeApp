@@ -6,7 +6,7 @@
     <img src="media/RLogoNoName.ico" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Best Recipes Ever</h3>
+  <h3 align="center">RecipeApp</h3>
 
   <p align="center">
     A simple, intuitive recipe app built with Django and hosted with Heroku. Plugged into a SQL database, works right in the browser. Create and save the best recipes to your heart's content. This application was built as part of CareerFoundary's Web-Developer certificate program.
@@ -39,12 +39,8 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-<!-- SCREENSHOT -->
-<img
-  alt="BRE Screenshot"
-  src="media/screenshots/screenshot01.png"
-  style="height: 16rem; width: auto;"
-/>
+
+
 
 <!-- KEY FEATURES -->
 ### Key Features
@@ -76,27 +72,7 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- INSTALLATION -->
-### Installation
 
-Note: Run these commands in the terminal from the desired root directory
-
-1. Clone the repo
-   ```sh
-   git clone https://github.com/GuyRimel/BRE-Deployment.git
-   ```
-2. Install the requirements
-   ```sh
-   pip install -r requirements.txt
-   ```
-3. Migrate the database
-   ```sh
-   python manage.py migrate
-   ```
-3. Run the local server
-   ```sh
-   python manage.py runserver
-   ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
