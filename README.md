@@ -1,15 +1,11 @@
-<a id="readme-top"></a>
-<br />
 
 <div align="center">
-  <a href="https://guyrimel.github.io/Portfolio-Site/index.html">
-    <img src="media/RLogoNoName.ico" alt="Logo" width="80" height="80">
-  </a>
+  
 
   <h3 align="center">RecipeApp</h3>
 
   <p align="center">
-    A simple, intuitive recipe app built with Django and hosted with Heroku. Plugged into a SQL database, works right in the browser. Create and save the best recipes to your heart's content. This application was built as part of CareerFoundary's Web-Developer certificate program.
+    An easy-to-use recipe application developed using Django and deployed on Heroku. Utilizing a SQL database, it seamlessly operates within any web browser. Explore, create, and store your favorite recipes effortlessly. This project was crafted as a component of CareerFoundary's Web Developer certificate program.
   </p>
 </div>
 <br />
