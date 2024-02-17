@@ -16,7 +16,7 @@ def home(request):
 
 class RecipeListView(LoginRequiredMixin,ListView):          
    model = Recipe                        
-   template_name = 'recipes/main.html' 
+   template_name = 'recipes/list.html' 
 
 class RecipeDetailView(DetailView):
    model = Recipe

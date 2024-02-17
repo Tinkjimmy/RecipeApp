@@ -7,8 +7,15 @@
 <body>
     <div class="container">
         <h1 style="background-color: #FFDAB9; padding: 10px;">Search for recipes difficulty</h1>
-        <hr>
 
+        <hr>
+        <div class="logout-link">
+            <a href="{% url 'logout' %}">Logout</a>
+        </div>
+        <div class="home-link">
+            <a href="{% url 'recipes:home' %}">Home</a>
+        </div>
+        <hr>
         <div class="form-container">
             <form action="" method="POST">
                 {% csrf_token %}
