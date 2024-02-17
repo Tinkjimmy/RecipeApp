@@ -26,7 +26,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['https://recipe-app-12345-a984bee9dbaf.herokuapp.com','*']
 
-
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY','django-insecure-ml49cp(e)=yakpevh4xz)3w)6xuq6kv7g&3^xf^)gr-n3&p#%9')
 # Application definition
 
 INSTALLED_APPS = [
