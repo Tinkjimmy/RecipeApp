@@ -9,6 +9,11 @@ li {
     margin: 0;
     padding: 0;
 }
+h1{
+    background-color: #86b971;
+     padding: 10px;
+     border-radius: 15px;
+}
 
 body {
     font-family: Arial, sans-serif;
@@ -19,6 +24,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    
 }
 
 /* Header styles */
@@ -169,4 +175,9 @@ th {
     border-radius: 10px;
     margin-bottom: 20px;
     display: inline-block;
+}
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjust the value to control the space between links */
 }
