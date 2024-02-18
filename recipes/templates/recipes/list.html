@@ -1,254 +1,244 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
+   
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600&display=swap");
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600&display=swap');
 
-      /* Define font family */
-      body {
-        font-family: "Fira Sans", sans-serif;
-      }
+        /* Define font family */
+        body {
+            font-family: 'Fira Sans', sans-serif;
+        }
 
-      /* Box sizing */
-      html {
-        box-sizing: border-box;
-      }
+        /* Box sizing */
+        html {
+            box-sizing: border-box;
+        }
 
-      *,
-      *:before,
-      *:after {
-        box-sizing: inherit;
-      }
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
 
-      /* Reset image styles */
-      img {
-        max-width: 100%;
-        height: auto;
-      }
+        /* Reset image styles */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
 
-      /* Body styles */
-      body {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-        padding: 0;
-        height: 100vh;
-        color: #1f1d42;
-        background-color: #f0f8e1;
-        font-size: 100%;
-        -webkit-text-size-adjust: 100%;
-        font-variant-ligatures: none;
-        text-rendering: optimizeLegibility;
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-font-smoothing: antialiased;
-      }
+        /* Body styles */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            color: #1F1D42;
+            background-color: #F0F8E1;
+            font-size: 100%;
+            -webkit-text-size-adjust: 100%;
+            font-variant-ligatures: none;
+            text-rendering: optimizeLegibility;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+        }
 
-      /* Card styles */
+        /* Card styles */
 
-      .card-hover {
-        max-width: 360px; /* Set a maximum width */
-        width: 100%; /* Occupy available width */
-        height: auto;
-        position: relative;
-        overflow: hidden;
-        box-shadow: 0 0 32px -10px rgba(0, 0, 0, 0.08);
-        border-radius: 15px; /* Add border-radius for rounded corners */
-      }
 
-      .card-hover:hover .card-hover__content {
-        background-color: #dee8c2;
-        bottom: 100%;
-        transform: translateY(100%);
-        padding: 50px 60px;
-        transition: all 0.35s cubic-bezier(0.1, 0.72, 0.4, 0.97);
-      }
+        
+        .card-hover {
+    width: 360px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 32px -10px rgba(0, 0, 0, 0.08);
+    border-radius: 15px; /* Add border-radius for rounded corners */
+}
 
-      .card-hover:hover .card-hover__link {
-        opacity: 1;
-        transform: translate(-50%, 0);
-        transition: all 0.3s 0.35s cubic-bezier(0.1, 0.72, 0.4, 0.97);
-      }
+        .card-hover:hover .card-hover__content {
+            background-color: #DEE8C2;
+            bottom: 100%;
+            transform: translateY(100%);
+            padding: 50px 60px;
+            transition: all 0.35s cubic-bezier(.1, .72, .4, .97);
+        }
 
-      .card-hover:hover img {
-        transform: scale(1);
-        transition: 0.35s 0.1s transform cubic-bezier(0.1, 0.72, 0.4, 0.97);
-      }
+        .card-hover:hover .card-hover__link {
+            opacity: 1;
+            transform: translate(-50%, 0);
+            transition: all 0.3s 0.35s cubic-bezier(.1, .72, .4, .97);
+        }
 
-      .card-hover__content {
-        width: 100%;
-        text-align: center;
-        background-color: #86b971;
-        padding: 0 60px 50px;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        transform: translateY(0);
-        transition: all 0.35s 0.35s cubic-bezier(0.1, 0.72, 0.4, 0.97);
-        will-change: bottom, background-color, transform, padding;
-        z-index: 1;
-      }
+        .card-hover:hover img {
+            transform: scale(1);
+            transition: 0.35s 0.1s transform cubic-bezier(.1, .72, .4, .97);
+        }
 
-      .card-hover__content::before,
-      .card-hover__content::after {
-        content: "";
-        width: 100%;
-        height: 120px;
-        background-color: inherit;
-        position: absolute;
-        left: 0;
-        z-index: -1;
-      }
+        .card-hover__content {
+            width: 100%;
+            text-align: center;
+            background-color: #86B971;
+            padding: 0 60px 50px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform: translateY(0);
+            transition: all 0.35s 0.35s cubic-bezier(.1, .72, .4, .97);
+            will-change: bottom, background-color, transform, padding;
+            z-index: 1;
+        }
 
-      .card-hover__content::before {
-        top: -80px;
-        clip-path: ellipse(60% 80px at bottom center);
-      }
+        .card-hover__content::before,
+        .card-hover__content::after {
+            content: '';
+            width: 100%;
+            height: 120px;
+            background-color: inherit;
+            position: absolute;
+            left: 0;
+            z-index: -1;
+        }
 
-      .card-hover__content::after {
-        bottom: -80px;
-        clip-path: ellipse(60% 80px at top center);
-      }
+        .card-hover__content::before {
+            top: -80px;
+            clip-path: ellipse(60% 80px at bottom center);
+        }
 
-      .card-hover__title {
-        font-size: 1.5rem;
-        margin-bottom: 1em;
-      }
+        .card-hover__content::after {
+            bottom: -80px;
+            clip-path: ellipse(60% 80px at top center);
+        }
 
-      .card-hover__title span {
-        color: #2d7f0b;
-      }
+        .card-hover__title {
+            font-size: 1.5rem;
+            margin-bottom: 1em;
+        }
 
-      .card-hover__link {
-        position: absolute;
-        bottom: 1rem;
-        left: 50%;
-        transform: translate(-50%, 10%);
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        text-decoration: none;
-        color: #2d7f0b;
-        opacity: 0;
-        padding: 10px;
-        transition: all 0.35s;
-      }
+        .card-hover__title span {
+            color: #2d7f0b;
+        }
 
-      .card-hover__link:hover svg {
-        transform: translateX(4px);
-      }
+        .card-hover__link {
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            transform: translate(-50%, 10%);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            text-decoration: none;
+            color: #2d7f0b;
+            opacity: 0;
+            padding: 10px;
+            transition: all 0.35s;
+        }
 
-      .card-hover__link svg {
-        width: 18px;
-        margin-left: 4px;
-        transition: transform 0.3s;
-      }
+        .card-hover__link:hover svg {
+            transform: translateX(4px);
+        }
 
-      .card-hover__extra {
-        height: 50%;
-        position: absolute;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        width: 100%;
-        font-size: 1.5rem;
-        text-align: center;
-        background-color: #86b971;
-        padding: 80px;
-        bottom: 0;
-        z-index: 0;
-        color: #dee8c2;
-        transform: translateY(100%);
-        will-change: transform;
-        transition: transform 0.35s;
-      }
+        .card-hover__link svg {
+            width: 18px;
+            margin-left: 4px;
+            transition: transform 0.3s;
+        }
 
-      .card-hover__extra span {
-        color: #2d7f0b;
-      }
+        .card-hover__extra {
+            height: 50%;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+            font-size: 1.5rem;
+            text-align: center;
+            background-color: #86b971;
+            padding: 80px;
+            bottom: 0;
+            z-index: 0;
+            color: #dee8c2;
+            transform: translateY(100%);
+            will-change: transform;
+            transition: transform 0.35s;
+        }
 
-      .card-hover img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-        z-index: -1;
-        transform: scale(1.2);
-        transition: 0.35s 0.35s transform cubic-bezier(0.1, 0.72, 0.4, 0.97);
-      }
-      .title-container {
-        text-align: center;
-        background-color: #86b971; /* Green background color */
-        padding: 20px;
-        margin-top: 0px;
-        margin-bottom: 20px; /* Add some space below the title */
-        color: #fff; /* Text color */
-        width: 100%; /* Stretch the container to the entire width */
-        border-radius: 15px;
-      }
+        .card-hover__extra span {
+            color: #2d7f0b;
+        }
 
-      .title-container h1 {
-        margin: 0;
-      }
+        .card-hover img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            z-index: -1;
+            transform: scale(1.2);
+            transition: 0.35s 0.35s transform cubic-bezier(.1, .72, .4, .97);
+        }
+        .title-container {
+            text-align: center;
+    background-color: #86B971; /* Green background color */
+    padding: 20px;
+    margin-top: 0px;
+    margin-bottom: 20px; /* Add some space below the title */
+    color: #fff; /* Text color */
+    width: 100%; /* Stretch the container to the entire width */
+    border-radius: 15px;
+}
+
+.title-container h1 {
+    margin: 0;
+}
+
     </style>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
-  <body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
     <div class="title-container green-background">
-      <h1>Recipes list</h1>
+        <h1>Recipes list</h1>
     </div>
     <div class="logout-link">
-      <a href="{% url 'logout' %}">Logout</a>
+        <a href="{% url 'logout' %}">Logout</a>
     </div>
     <div class="home-link">
-      <a href="{% url 'recipes:home' %}">Home</a>
+        <a href="{% url 'recipes:home' %}">Home</a>
     </div>
     <div class="card-container">
-      <table>
-        <tr>
-          {% for object in object_list %} {% if forloop.counter0|divisibleby:3
-          %}
-        </tr>
-        <tr>
-          {% endif %}
-          <td>
-            <div class="card-hover">
-              <div class="card-hover__content">
-                <h3 class="card-hover__title">{{ object.name }}</h3>
-                <a
-                  href="{{ object.get_absolute_url }}"
-                  class="card-hover__link"
-                >
-                  <span>View Recipe</span>
-                  <svg
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-                    />
-                  </svg>
-                </a>
-              </div>
-              <div class="card-hover__extra">
-                <p class="card-hover__text">Click to view details</p>
-              </div>
-              <img src="{{ object.pic.url }}" alt="{{ object.name }}" />
-            </div>
-          </td>
-          {% endfor %}
-        </tr>
-      </table>
+        <table>
+            <tr>
+                {% for object in object_list %}
+                {% if forloop.counter0|divisibleby:3 %}
+                </tr><tr>
+                {% endif %}
+                <td>
+                    <div class="card-hover">
+                        <div class="card-hover__content">
+                            <h3 class="card-hover__title">{{ object.name }}</h3>
+                            <a href="{{ object.get_absolute_url }}" class="card-hover__link">
+                                <span>View Recipe</span>
+                                <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                </svg>        
+                            </a>
+                        </div>
+                        <div class="card-hover__extra">
+                            <p class="card-hover__text">Click to view details</p>
+                        </div>
+                        <img src="{{ object.pic.url }}" alt="{{ object.name }}">
+                    </div>
+                </td>
+                {% endfor %}
+            </tr>
+        </table>
     </div>
-  </body>
+</body>
+
 </html>
