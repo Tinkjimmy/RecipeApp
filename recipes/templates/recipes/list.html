@@ -5,217 +5,13 @@
 <html lang="en">
 <head>
     
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600&display=swap');
-
-        /* Define font family */
-        body {
-            font-family: 'Fira Sans', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #F0F8E1;
-            color: #1F1D42;
-        }
-
-        /* Box sizing */
-        html {
-            box-sizing: border-box;
-        }
-
-        *, *:before, *:after {
-            box-sizing: inherit;
-        }
-
-        /* Reset image styles */
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        /* Title container */
-        .title-container {
-            text-align: center;
-            background-color: #86B971; /* Green background color */
-            padding: 20px;
-            margin-top: 0;
-            margin-bottom: 20px; /* Add some space below the title */
-            color: #fff; /* Text color */
-            width: 100%; /* Stretch the container to the entire width */
-            border-radius: 15px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .title-container h1 {
-            margin: 0;
-            padding-top: 30px; /* Adjust the padding to move the title higher */
-        }
-
-        /* Logout link */
-        .logout-link {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
-
-        /* Search form */
-        .search-form {
-            text-align: center;
-            margin-bottom: 20px; /* Add spacing below the form */
-        }
-
-        /* Card container */
-        .card-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px; /* Add spacing between cards */
-            padding: 0 20px; /* Add padding to the sides */
-        }
-
-        .card-container .card-hover {
-            width: 360px;
-            height: 500px;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 0 32px -10px rgba(0, 0, 0, 0.08);
-            border-radius: 15px; /* Add border-radius for rounded corners */
-        }
-
-        .card-container .card-hover:hover .card-hover__content {
-            background-color: #DEE8C2;
-            bottom: 100%;
-            transform: translateY(100%);
-            padding: 50px 60px;
-            transition: all 0.35s cubic-bezier(.1, .72, .4, .97);
-        }
-
-        .card-container .card-hover:hover .card-hover__link {
-            opacity: 1;
-            transform: translate(-50%, 0);
-            transition: all 0.3s 0.35s cubic-bezier(.1, .72, .4, .97);
-        }
-
-        .card-container .card-hover:hover img {
-            transform: scale(1);
-            transition: 0.35s 0.1s transform cubic-bezier(.1, .72, .4, .97);
-        }
-
-        .card-container .card-hover__content {
-            width: 100%;
-            text-align: center;
-            background-color: #86B971;
-            padding: 0 60px 50px;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            transform: translateY(0);
-            transition: all 0.35s 0.35s cubic-bezier(.1, .72, .4, .97);
-            will-change: bottom, background-color, transform, padding;
-            z-index: 1;
-        }
-
-        .card-container .card-hover__content::before,
-        .card-container .card-hover__content::after {
-            content: '';
-            width: 100%;
-            height: 120px;
-            background-color: inherit;
-            position: absolute;
-            left: 0;
-            z-index: -1;
-        }
-
-        .card-container .card-hover__content::before {
-            top: -80px;
-            clip-path: ellipse(60% 80px at bottom center);
-        }
-
-        .card-container .card-hover__content::after {
-            bottom: -80px;
-            clip-path: ellipse(60% 80px at top center);
-        }
-
-        .card-container .card-hover__title {
-            font-size: 1.5rem;
-            margin-bottom: 1em;
-        }
-
-        .card-container .card-hover__title span {
-            color: #2d7f0b;
-        }
-
-        .card-container .card-hover__link {
-            position: absolute;
-            bottom: 1rem;
-            left: 50%;
-            transform: translate(-50%, 10%);
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            text-decoration: none;
-            color: #2d7f0b;
-            opacity: 0;
-            padding: 10px;
-            transition: all 0.35s;
-        }
-
-        .card-container .card-hover__link:hover svg {
-            transform: translateX(4px);
-        }
-
-        .card-container .card-hover__link svg {
-            width: 18px;
-            margin-left: 4px;
-            transition: transform 0.3s;
-        }
-
-        .card-container .card-hover__extra {
-            height: 50%;
-            position: absolute;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            width: 100%;
-            font-size: 1.5rem;
-            text-align: center;
-            background-color: #86b971;
-            padding: 80px;
-            bottom: 0;
-            z-index: 0;
-            color: #dee8c2;
-            transform: translateY(100%);
-            will-change: transform;
-            transition: transform 0.35s;
-        }
-
-        .card-container .card-hover__extra span {
-            color: #2d7f0b;
-        }
-
-        .card-container .card-hover img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-            z-index: -1;
-            transform: scale(1.2);
-            transition: 0.35s 0.35s transform cubic-bezier(.1, .72, .4, .97);
-        }
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="{% static 'style_list.css' %}">
 </head>
 <body>
     <div class="title-container green-background">
         <h1>Recipes list</h1>
     </div>
-    <div class="logout-link">
-        <a href="{% url 'logout' %}">Logout</a>
-    </div>
+   
     <div class="search-form">
         <form method="GET" action="{% url 'recipes:list' %}">
             <input type="text" name="q" placeholder="Search...">
@@ -224,6 +20,15 @@
             <button type="submit">Search</button>
             <a href="{% url 'recipes:list' %}" class="btn">Show All Recipes</a>
         </form>
+    </div>
+    <div class="links">
+        
+        <div class="home-link">
+            <a href="{% url 'recipes:home' %}">Home</a>
+        </div>
+        <div class="logout-link">
+            <a href="{% url 'logout' %}">Logout</a>
+        </div>
     </div>
     <div class="card-container">
         {% if object_list %}
@@ -248,6 +53,8 @@
             <p>No recipes found.</p>
         {% endif %}
     </div>
+    
+    
 </body>
 </html>
 
