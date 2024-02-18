@@ -10,9 +10,10 @@ li {
     padding: 0;
 }
 h1{
-    background-color: #86b971;
+    background-color: #;
      padding: 10px;
      border-radius: 15px;
+     color: #fff;
 }
 
 body {
@@ -29,7 +30,7 @@ body {
 
 /* Header styles */
 header {
-    background-color: #fc8822;
+    background-color: #86b971;
     color: #fff;
     text-align: center;
     padding: 1em 0;
