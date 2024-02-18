@@ -6,6 +6,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin #this libary is requir
 from .forms import RecipesSearchForm
 import pandas as pd
 from .utils import get_chart
+from django.db.models import Q
 
 
 
@@ -14,9 +15,26 @@ from .utils import get_chart
 def home(request):
     return render(request,'recipes/recipes_home.html')
 
-class RecipeListView(LoginRequiredMixin,ListView):          
-   model = Recipe                        
-   template_name = 'recipes/list.html' 
+class RecipeListView(LoginRequiredMixin, ListView):
+    model = Recipe
+    template_name = 'recipes/list.html'
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        query = self.request.GET.get('q')
+        search_type = self.request.GET.get('search_type')
+
+        if query:
+            if search_type == 'name':
+                queryset = queryset.filter(name__icontains=query)
+            elif search_type == 'ingredient':
+                queryset = queryset.filter(ingredients__icontains=query)
+            elif search_type == 'both':
+                queryset = queryset.filter(
+                    Q(name__icontains=query) | Q(ingredients__icontains=query)
+                )
+
+        return queryset
 
 class RecipeDetailView(DetailView):
    model = Recipe
