@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.views.generic import ListView,DetailView
 from.models import Recipe
@@ -7,6 +7,7 @@ from .forms import RecipesSearchForm
 import pandas as pd
 from .utils import get_chart
 from django.db.models import Q
+from .forms import RecipeForm
 
 
 
@@ -87,3 +88,14 @@ def records(request):
       'chart': chart,
    }
    return render(request, 'recipes/records.html',context)
+
+
+def add_recipe(request):
+    if request.method == 'POST':
+        form = RecipeForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('recipes:list')  # Updated redirect to 'list'
+    else:
+        form = RecipeForm()
+    return render(request, 'recipes/add_recipe.html', {'form': form})

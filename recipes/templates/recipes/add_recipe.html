@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Recipe</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style_add_recipe.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Add Your Favorite Recipe</h1>
+    </header>
+    <main>
+        <form method="post">
+            {% csrf_token %}
+            <label for="id_name">Name:</label>
+            {{ form.name }}
+            <label for="id_cooking_time">Cooking Time (in minutes):</label>
+            {{ form.cooking_time }}
+            <label for="id_ingredients">Ingredients:</label>
+            {{ form.ingredients }}
+            <label for="id_difficulty">Difficulty:</label>
+            {{ form.difficulty }}
+            <label for="id_pic">Image:</label>
+            {{ form.pic }}
+            <button type="submit">Add Recipe</button>
+        </form>
+        <div class="links">
+            <div class="home-link">
+                <a href="{% url 'recipes:home' %}" style="color: #fff;text-decoration: none;">Home</a>
+            </div>
+            <div class="logout-link">
+                <a href="{% url 'logout' %}" style="color: #fff;text-decoration: none;">Logout</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
