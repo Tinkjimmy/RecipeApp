@@ -1,0 +1,78 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../media/pexels-skyler-ewing-10695968.jpg'); /* Replace 'path_to_your_image.jpg' with the path to your image */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.5); /* Add a background color to make the text readable */
+    text-align: center;
+    padding: 1em 0;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative; /* Add position relative to ensure proper stacking context */
+    z-index: 1; /* Ensure the header is above other elements */
+}
+
+nav {
+    background-color: rgba(220, 18, 18, 0.5); /* Add a background color to make the text readable */
+    opacity: 100%;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    width: 100%;
+    z-index: 2; /* Ensure the navigation bar is above other elements */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 1em;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+.main-content {
+    text-align: center;
+    padding: 2em;
+    color: #fff;
+    position: relative;
+    height: 1000px; /* Adjust as needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Add a background color to make the text readable */
+    z-index: 1; /* Ensure the content is below the navigation bar */
+}
+
+.quote-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+h1 {
+    color: #fff;
+    margin-bottom: 0.5em;
+    font-size: 40px;
+}
+
+p {
+    font-size: 1.2em;
+    color: #fff;
+    margin-top: 0;
+}
+
+.quote-overlay p {
+    font-size: 40px;
+    color: #fff;
+}
+
+/* Rest of your styles */
