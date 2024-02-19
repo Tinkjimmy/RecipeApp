@@ -2,7 +2,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('../media/pexels-skyler-ewing-10695968.jpg'); /* Replace 'path_to_your_image.jpg' with the path to your image */
+    background-image: url('https://images.pexels.com/photos/842571/pexels-photo-842571.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); /* Replace 'path_to_your_image.jpg' with the path to your image */
     background-size: cover;
     background-position: center;
     color: #fff;
